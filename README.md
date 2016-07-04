@@ -1,4 +1,4 @@
-Kalman-Karma
+Kalman Karma
 ============
 
 School project for the **Artificial Intelligence for Robotics** class at Georgia Tech.
