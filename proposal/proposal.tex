@@ -1,0 +1,235 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Large Colored Title Article
+% LaTeX Template
+% Version 1.1 (25/11/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Frits Wenneker (http://www.howtotex.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[DIV=calc, paper=a4, fontsize=11pt, onecolumn]{scrartcl}	 % A4 paper and 11pt font size
+
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+\usepackage[english]{babel} % English language/hyphenation
+\usepackage[protrusion=true,expansion=true]{microtype} % Better typography
+\usepackage{amsmath,amsfonts,amsthm} % Math packages
+\usepackage[svgnames]{xcolor} % Enabling colors by their 'svgnames'
+\usepackage[hang, small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under/above floats in tables or figures
+\usepackage{booktabs} % Horizontal rules in tables
+\usepackage{fix-cm}	 % Custom font sizes - used for the initial letter in the documen
+\usepackage{hyperref}
+\makeatletter
+\newcommand{\mypm}{\mathbin{\mathpalette\@mypm\relax}}
+\newcommand{\@mypm}[2]{\ooalign{%
+  \raisebox{.1\height}{$#1+$}\cr
+  \smash{\raisebox{-.6\height}{$#1-$}}\cr}}
+\makeatother
+
+\usepackage[procnames]{listings} % python code insertion
+
+\usepackage{graphicx}
+\graphicspath{ {./images/} } % Images location
+
+\usepackage{sectsty} % Enables custom section titles
+\allsectionsfont{\usefont{OT1}{phv}{b}{n}} % Change the font of all section commands
+
+\usepackage{fancyhdr} % Needed to define custom headers/footers
+\pagestyle{fancy} % Enables the custom headers/footers
+\usepackage{lastpage} % Used to determine the number of pages in the document (for "Page X of Total")
+
+% Headers - all currently empty
+\lhead{}
+\chead{}
+\rhead{}
+
+% Footers
+\lfoot{}
+\cfoot{}
+\rfoot{\footnotesize Page \thepage\ of 4} % "Page 1 of 2"
+
+\newcommand{\KBAIMethod}{Final Project Proposal}
+\renewcommand{\headrulewidth}{0.0pt} % No header rule
+\renewcommand{\footrulewidth}{0.4pt} % Thin footer rule
+
+\usepackage{lettrine} % Package to accentuate the first letter of the text
+\newcommand{\initial}[1]{ % Defines the command and style for the first letter
+\lettrine[lines=3,lhang=0.3,nindent=0em]{
+\color{DarkGoldenrod}
+{\textsf{#1}}}{}}
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\usepackage{titling} % Allows custom title configuration
+
+\newcommand{\HorRule}{\color{DarkGoldenrod} \rule{\linewidth}{1pt}} % Defines the gold horizontal rule around the title
+
+\pretitle{\vspace{-30pt} \begin{flushleft} \HorRule \fontsize{30}{30} \usefont{OT1}{phv}{b}{n} \color{DarkRed} \selectfont} % Horizontal rule before the title
+
+\title{\KBAIMethod} % Your article title
+
+\posttitle{\par\end{flushleft}\vskip 0.1em % Whitespace under the title
+Applying some of the probabilistic methods\\
+learned during the course to real robots\\
+using the Lego Mindstorms EV3 kits.
+}
+\preauthor{\begin{flushright}\large \lineskip 0.5em \usefont{OT1}{phv}{b}{n}} % Author font configuration
+
+\author{ } % Your name
+
+\postauthor{\footnotesize \usefont{OT1}{phv}{m}{n} \color{Black} % Configuration for the institution name
+
+\textbf{Kalman Karma} \usefont{OT1}{phv}{m}{n} \par 
+\usefont{OT1}{phv}{m}{n}Charity Abbott \usefont{OT1}{phv}{m}{sl}- charityl@gatech.edu​ - gtID: 903094560 \par 
+\usefont{OT1}{phv}{m}{n}James Jackson \usefont{OT1}{phv}{m}{sl}- jjackson308@gatech.edu - gtID: 900411826  \par 
+\usefont{OT1}{phv}{m}{n}Miguel Morales \usefont{OT1}{phv}{m}{sl}- mimoralea@gatech.edu - gtID: 903014623 \usefont{OT1}{phv}{m}{n} \par
+\textbf{Georgia Institute of Technology} 
+\par College Of Computing \par CS8803: Artificial Intelligence for Robotics
+
+\par\end{flushright}\HorRule} % Horizontal rule after the title
+
+\date{\today} % Add a date here if you would like one to appear underneath the title block
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+\definecolor{keywords}{RGB}{255,0,90}
+\definecolor{comments}{RGB}{0,0,113}
+\definecolor{red}{RGB}{160,0,0}
+\definecolor{green}{RGB}{0,150,0}
+
+\lstset{language=Python, 
+        basicstyle=\ttfamily\scriptsize, 
+        keywordstyle=\color{blue},
+        commentstyle=\color{comments},
+        stringstyle=\color{red},
+        showstringspaces=false,
+        identifierstyle=\color{gray},
+        procnamekeys={def,class},
+        breaklines=true}
+
+\maketitle % Print the title
+
+\thispagestyle{fancy} % Enabling the custom headers/footers for the first page 
+
+%----------------------------------------------------------------------------------------
+%	ABSTRACT
+%----------------------------------------------------------------------------------------
+
+% The first character should be within \initial{}
+\initial{O}\textbf{ur intention for the final project is to implement some of the probabilistic 
+robotics methods learned during the semester on the Mindstorm EV3 kits. The primary motivation
+is to gain real world experience on these advanced technologies. On this paper, we will briefly
+propose a set of realistic goals along with their due dates.}
+
+%----------------------------------------------------------------------------------------
+%	ARTICLE CONTENTS
+%----------------------------------------------------------------------------------------
+
+\section*{Equipment}
+For this assignment we will be using the Mindstroms EV3 standard kit with a couple additions. In specific we
+all will be using the following: \\
+
+\subsection*{Processing}
+\begin{itemize}
+  \item EV3 Brick with ARM9 processor
+\end{itemize}
+
+\subsection*{Sensors}
+\begin{itemize}
+  \item UltraSonic Sensor
+  \item Infrared Sensor
+  \item Color Sensor
+  \item Touch Sensor
+\end{itemize}
+
+\subsection*{Actuators}
+\begin{itemize}
+  \item 2 Large Servo Motors for forward motion and steering control
+  \item 1 Medium Servo Motors for orienting the ultrasonic sensor
+\end{itemize}
+
+\subsection*{Operating Systems and Programming}
+The programmable brick runs Debian Linux from \url{http://www.ev3dev.org}\ and programming will be done in Python using the API from \url{https://github.com/topikachu/python-ev3}\
+
+\subsection*{Chassis}
+The chassis we will be using will vary among the team members. However, we will each adapt the project to our individual dimensions.\\
+%------------------------------------------------
+
+\section*{Overall Goal}
+Error values will be used to compute the success rate of the program. The goal is to acheive accuracy at least as good as the sum of all average error values. Goals are met if the absolute value measured is within $\mypm$ the error value.\\
+
+\begin{itemize}
+  \item Robot Localization
+  \item Robot Control
+  \item Add Filters
+\end{itemize}
+%------------------------------------------------
+
+\section*{Goals and Expectations}
+Project Deadline: December, 7th 2014 - 10pm EST\\
+5 weeks to completion\\
+
+\begin{enumerate}
+\item Movement - Due: Week Nov 9th.
+  \begin{enumerate}
+    \item Determine the average error value from moving the robot 10 cm forward and 10 cm backward.
+    \item Determine the average error value while turning right 90 degrees.
+    \item Determine the average error value of spinning the turret sensor 180 degrees clockwise and 180 degrees counter clockwise.
+  \end{enumerate}
+\item Sensing - Due: Week Nov 16th.
+  \begin{enumerate}
+    \item Determine the average sensor error of the ultraSonic Sensor while stationary, moving and rotating.
+    \item Determine the average sensor error of the infrared Sensor while stationary and moving.
+    \item Determine the average sensor error of the color Sensor while stationary and moving.    
+    \item Calculate the sonar cone for the ultrasonic sensor.
+  \end{enumerate}
+\item Environment response tests - Due: Week Nov 30th.
+  \begin{enumerate}
+    \item Stop within 10 cm from a wall using the ultrasonic and then the infrared sensor.
+    \item Circumnavigate a room once by turning right and following the wall using the ultrasonic and then the infrared sensor.
+    \item Move forward until the color sensor reads red.
+    \item Follow a red line around the room using the color sensor.
+  \end{enumerate}
+\item Localization - Due: Week Dec 7th.
+  \begin{enumerate}
+    \item Build a map of landmarks (colors) and walls. Place the robot in a random location and have it localize itself with the following action cycle. (Sense, Compute, Move) The robot moves small steps and stops while it senses and computes the next step. The goal is to reach a single red dot once localized.
+    \item OPTIONAL: Repeat the first localization problem, but thread sense, compute and move to be simultaneous actions.
+    \item OPTIONAL: Create a map while exploring the room instead of a given map.
+    \item OPITONAL: Using the created map, try to find the red dot in the room.
+  \end{enumerate}
+\end{enumerate}
+
+%------------------------------------------------
+\section*{Probabilistic Methods}
+The project will use at least one method taught in the course CS8803 for all goals mentioned in part 4 and optionally for the last step of part 3. Any algorithms from outside of the course will be documented and referenced accordingly.
+
+%------------------------------------------------
+\section*{Deliverables}
+We will use the same submission logistics as the hexabug project: \\
+Only one of our team members will submit the final project. That team member
+will put the archived files into their Drop Box on T-Square. \\
+The following are the deliverables for this project:
+\begin{itemize}
+  \item A list of all of your team members with emails and gtIDs.
+  \item Source code for all project pieces.
+  \item Flat file outputs for the sensor readings during final runs.
+  \item Video recording of final runs.
+  \item Readme file containing an explaination of the algorithms and methods used for each part.
+  \item Data summary and charts of results.
+\end{itemize}
+
+%------------------------------------------------
+\end{document}

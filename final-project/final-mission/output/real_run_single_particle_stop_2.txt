@@ -1,0 +1,949 @@
+
+
+REAL ROBOT RUN - SINGLE PARTICLE (KNOWN STARTING POSITION), DON'T GRAB TARGET (NEED TO MEASURE END POSITION) - DATA SET #2
+
+START POSITION: x=171.4, y=313.0, orient = 0.0 rad (same start as Data Set #1 but runs a couple more steps)
+MEASURED END POSITION: x=257.0, y=67.0, orient = 277 deg (4.83 rad)
+
+
+SETTINGS
+========
+
+run_steps = 27 # only applies to real robot
+single_particle_mode = True # debugging mode with a single particle, uses known starting point (avoids running full particle filter)
+real_robot_mode = True # run on real robot rather than simulating with logged robot data
+active_set = 1 # active data set (see above) for simulation mode
+motion_noise_on = True # motion noise
+grab_target = False # go to target on real robot runs (must stay in place when gathering data for subsequent simulation)
+known_starting_orientation = False # simulate compass
+pf_number_particles = 500 # number of particles in particle filter
+sensor_noise_left = 10.0 # left sensor noise
+sensor_noise_front = 15.0 # front sensor noise (front sensor tends to be much further from wall on average)
+base_steering_noise = 0.03 # steering noise (orientation noise)
+base_distance_noise = 5.0 # distance noise (position noise)
+base_turning_noise = 0.05 # turning noise
+robust_likelihood_constant = 0.000001 # avoids being overly aggressive on particle killing
+
+
+OUTPUT
+======
+
+Robot - Sensor dist, left:  25.9
+Robot - Sensor dist, front:  74.8
+PF - measurement update...
+Sim - Found valid wall:  [106, 348, 255, 348]
+Sim - Angle to wall:  0.0
+Sim - Distance to wall:  25.0
+Sim - Wall intercept point:  171.4 348.0
+Sim - Sensor dist,  left : 25.0
+Sim - Found valid wall:  [255, 348, 255, 279]
+Sim - Angle to wall:  0.0
+Sim - Distance to wall:  73.6
+Sim - Wall intercept point:  255.0 313.0
+Sim - Sensor dist,  front : 73.6
+Sim - Sensor difference, left:  0.9
+Sim - Sensor difference, front:  1.2
+Sim - gaussian error left:  0.0397329831579
+Sim - gaussian error front:  0.0265111803674
+Sim - gaussian error total:  0.00105436828303
+PF - resampling...
+PF - max w:  0.00105436828303
+PF - mean w:  0.00105436828303
+PF - standard deviation w:  0.0
+PF - estimated position: 
+[171.4, 313.0, 0.0]
+
+PF: current particle set: 
+[171.4 313.0]
+PF - update motion...
+Sim - straight or slight turn...
+Sim - new x:  185.527568802
+Sim - new y:  317.099603803
+Sim - new orientation (rad):  0.0262040346878
+Sim - new orientation (deg):  1.50138059383
+
+Robot - Sensor dist, left:  26.7
+Robot - Sensor dist, front:  56.7
+PF - measurement update...
+Sim - Found valid wall:  [106, 348, 255, 348]
+Sim - Angle to wall:  0.0262040346878
+Sim - Distance to wall:  20.911008134
+Sim - Wall intercept point:  184.717668367 348.0
+Sim - Sensor dist,  left : 20.911008134
+Sim - Found valid wall:  [255, 348, 255, 279]
+Sim - Angle to wall:  0.0262040346878
+Sim - Distance to wall:  59.4962896958
+Sim - Wall intercept point:  255.0 318.920478588
+Sim - Sensor dist,  front : 59.4962896958
+Sim - Sensor difference, left:  5.78899186603
+Sim - Sensor difference, front:  2.79628969584
+Sim - gaussian error left:  0.0337395088012
+Sim - gaussian error front:  0.0261380070667
+Sim - gaussian error total:  0.000882883519471
+PF - resampling...
+PF - max w:  0.000882883519471
+PF - mean w:  0.000882883519471
+PF - standard deviation w:  0.0
+PF - estimated position: 
+[185.52756880239, 317.0996038028145, 0.026204034687828948]
+
+PF: current particle set: 
+[185.52 317.09]
+PF - update motion...
+Sim - straight or slight turn...
+Sim - new x:  205.249320247
+Sim - new y:  316.560257113
+Sim - new orientation (rad):  6.27265834637
+Sim - new orientation (deg):  359.396849574
+
+Robot - Sensor dist, left:  26.7
+Robot - Sensor dist, front:  38.4
+PF - measurement update...
+Sim - Found valid wall:  [106, 348, 255, 348]
+Sim - Angle to wall:  0.01052696081
+Sim - Distance to wall:  21.4414849952
+Sim - Wall intercept point:  205.580297414 348.0
+Sim - Sensor dist,  left : 21.4414849952
+Sim - Found valid wall:  [255, 348, 255, 279]
+Sim - Angle to wall:  0.01052696081
+Sim - Distance to wall:  39.7534364887
+Sim - Wall intercept point:  255.0 316.03651431
+Sim - Sensor dist,  front : 39.7534364887
+Sim - Sensor difference, left:  5.25851500483
+Sim - Sensor difference, front:  1.35343648868
+Sim - gaussian error left:  0.0347427790225
+Sim - gaussian error front:  0.0264881085813
+Sim - gaussian error total:  0.000921270503163
+PF - resampling...
+PF - max w:  0.000921270503163
+PF - mean w:  0.000921270503163
+PF - standard deviation w:  0.0
+PF - estimated position: 
+[205.2493202467561, 316.56025711275475, 6.272658346369592]
+
+PF: current particle set: 
+[205.24 316.56]
+PF - update motion...
+Sim - straight or slight turn...
+Sim - new x:  219.087894243
+Sim - new y:  322.670653743
+Sim - new orientation (rad):  6.28001739558
+Sim - new orientation (deg):  359.818492036
+
+Robot - Sensor dist, left:  25.9
+Robot - Sensor dist, front:  20.4
+PF - measurement update...
+Sim - Found valid wall:  [106, 348, 255, 348]
+Sim - Angle to wall:  0.0031679115978
+Sim - Distance to wall:  15.3294733564
+Sim - Wall intercept point:  219.168135641 348.0
+Sim - Sensor dist,  left : 15.3294733564
+Sim - Found valid wall:  [255, 348, 255, 279]
+Sim - Angle to wall:  0.00316791159787
+Sim - Distance to wall:  25.9122859589
+Sim - Wall intercept point:  255.0 322.556886986
+Sim - Sensor dist,  front : 25.9122859589
+Sim - Sensor difference, left:  10.5705266436
+Sim - Sensor difference, front:  5.5122859589
+Sim - gaussian error left:  0.0228180407756
+Sim - gaussian error front:  0.02485959174
+Sim - gaussian error total:  0.000568247177987
+PF - resampling...
+PF - max w:  0.000568247177987
+PF - mean w:  0.000568247177987
+PF - standard deviation w:  0.0
+PF - estimated position: 
+[219.08789424276796, 322.67065374255685, 6.28001739558176]
+
+PF: current particle set: 
+[219.08 322.67]
+PF - update motion...
+Sim - turn in place...
+Sim - new x:  219.087894243
+Sim - new y:  322.670653743
+Sim - new orientation (rad):  4.85746471822
+Sim - new orientation (deg):  278.312227488
+
+Robot - Sensor dist, left:  18.4
+Robot - Sensor dist, front:  200.0
+PF - measurement update...
+Sim - Found valid wall:  [255, 348, 255, 279]
+Sim - Angle to wall:  0.145075737837
+Sim - Distance to wall:  26.2933690695
+Sim - Wall intercept point:  255.0 327.917490742
+Sim - Sensor dist,  left : 26.2933690695
+Sim - Sensor dist,  front : 200.0
+Sim - Sensor difference, left:  7.89336906954
+Sim - Sensor difference, front:  0.0
+Sim - gaussian error left:  0.0292156719655
+Sim - gaussian error front:  0.0265961520268
+Sim - gaussian error total:  0.000778024453158
+PF - resampling...
+PF - max w:  0.000778024453158
+PF - mean w:  0.000778024453158
+PF - standard deviation w:  0.0
+PF - estimated position: 
+[219.08789424276796, 322.67065374255685, 4.85746471822168]
+
+PF: current particle set: 
+[219.08 322.67]
+PF - update motion...
+Sim - straight or slight turn...
+Sim - new x:  223.726972322
+Sim - new y:  307.434996416
+Sim - new orientation (rad):  4.75350033626
+Sim - new orientation (deg):  272.355507182
+
+Robot - Sensor dist, left:  20.7
+Robot - Sensor dist, front:  200.0
+PF - measurement update...
+Sim - Found valid wall:  [255, 348, 255, 279]
+Sim - Angle to wall:  0.041111355877
+Sim - Distance to wall:  21.2994742556
+Sim - Wall intercept point:  255.0 308.721397802
+Sim - Sensor dist,  left : 21.2994742556
+Sim - Sensor dist,  front : 200.0
+Sim - Sensor difference, left:  0.599474255578
+Sim - Sensor difference, front:  0.0
+Sim - gaussian error left:  0.0398226085834
+Sim - gaussian error front:  0.0265961520268
+Sim - gaussian error total:  0.00106012815199
+PF - resampling...
+PF - max w:  0.00106012815199
+PF - mean w:  0.00106012815199
+PF - standard deviation w:  0.0
+PF - estimated position: 
+[223.7269723219988, 307.43499641623356, 4.753500336261723]
+
+PF: current particle set: 
+[223.72 307.43]
+PF - update motion...
+Sim - straight or slight turn...
+Sim - new x:  217.396805972
+Sim - new y:  294.141383029
+Sim - new orientation (rad):  4.77415814444
+Sim - new orientation (deg):  273.539112405
+
+Robot - Sensor dist, left:  32.6
+Robot - Sensor dist, front:  200.0
+PF - measurement update...
+Sim - Found valid wall:  [255, 348, 255, 279]
+Sim - Angle to wall:  0.0617691640575
+Sim - Distance to wall:  27.675044419
+Sim - Wall intercept point:  255.0 296.467059461
+Sim - Sensor dist,  left : 27.675044419
+Sim - Sensor dist,  front : 200.0
+Sim - Sensor difference, left:  4.92495558095
+Sim - Sensor difference, front:  0.0
+Sim - gaussian error left:  0.0353378884458
+Sim - gaussian error front:  0.0265961520268
+Sim - gaussian error total:  0.000940851853409
+PF - resampling...
+PF - max w:  0.000940851853409
+PF - mean w:  0.000940851853409
+PF - standard deviation w:  0.0
+PF - estimated position: 
+[217.39680597194732, 294.1413830291371, 4.774158144442181]
+
+PF: current particle set: 
+[217.39 294.14]
+PF - update motion...
+Sim - straight or slight turn...
+Sim - new x:  234.073085211
+Sim - new y:  282.100739758
+Sim - new orientation (rad):  4.94503545548
+Sim - new orientation (deg):  283.329661141
+
+Robot - Sensor dist, left:  77.4
+Robot - Sensor dist, front:  200.0
+PF - measurement update...
+Sim - Found valid wall:  [255, 348, 255, 279]
+Sim - Angle to wall:  0.232646475094
+Sim - Distance to wall:  11.506302113
+Sim - Wall intercept point:  255.0 287.059093112
+Sim - Sensor dist,  left : 11.506302113
+Sim - Sensor dist,  front : 200.0
+Sim - Sensor difference, left:  65.893697887
+Sim - Sensor difference, front:  0.0
+Sim - gaussian error left:  1.48737867286e-11
+Sim - gaussian error front:  0.0265961520268
+Sim - gaussian error total:  1.00000039559e-06
+PF - resampling...
+PF - max w:  1.00000039559e-06
+PF - mean w:  1.00000039559e-06
+PF - standard deviation w:  0.0
+PF - estimated position: 
+[234.0730852108018, 282.1007397580569, 4.945035455478564]
+
+PF: current particle set: 
+[234.07 282.10]
+PF - update motion...
+Sim - turn in place...
+Sim - new x:  234.073085211
+Sim - new y:  282.100739758
+Sim - new orientation (rad):  5.7026153644
+Sim - new orientation (deg):  326.735792566
+PF - update motion...
+Sim - straight or slight turn...
+Sim - new x:  253.703503702
+Sim - new y:  266.358240374
+Sim - new orientation (rad):  5.66046876815
+Sim - new orientation (deg):  324.320970481
+
+Robot - Sensor dist, left:  38.3
+Robot - Sensor dist, front:  200.0
+PF - measurement update...
+Sim - Sensor dist,  left : 200.0
+Sim - Sensor dist,  front : 200.0
+Sim - Sensor difference, left:  161.7
+Sim - Sensor difference, front:  0.0
+Sim - gaussian error left:  6.66284693179e-59
+Sim - gaussian error front:  0.0265961520268
+Sim - gaussian error total:  1e-06
+PF - resampling...
+PF - max w:  1e-06
+PF - mean w:  1e-06
+PF - standard deviation w:  0.0
+PF - estimated position: 
+[253.70350370161398, 266.3582403744667, 5.660468768150277]
+
+PF: current particle set: 
+[253.70 266.35]
+PF - update motion...
+Sim - turn in place...
+Sim - new x:  253.703503702
+Sim - new y:  266.358240374
+Sim - new orientation (rad):  0.222413838107
+Sim - new orientation (deg):  12.7433742288
+PF - update motion...
+Sim - straight or slight turn...
+Sim - new x:  276.527246865
+Sim - new y:  266.503085685
+Sim - new orientation (rad):  0.244868727061
+Sim - new orientation (deg):  14.0299445953
+
+Robot - Sensor dist, left:  27.1
+Robot - Sensor dist, front:  81.2
+PF - measurement update...
+Sim - Found valid wall:  [255, 279, 360, 279]
+Sim - Angle to wall:  0.244868727061
+Sim - Distance to wall:  2.88117047983
+Sim - Wall intercept point:  273.404477974 279.0
+Sim - Sensor dist,  left : 2.88117047983
+Sim - Sensor dist,  front : 200.0
+Sim - Sensor difference, left:  24.2188295202
+Sim - Sensor difference, front:  118.8
+Sim - gaussian error left:  0.00212436542903
+Sim - gaussian error front:  6.36728239903e-16
+Sim - gaussian error total:  1e-06
+PF - resampling...
+PF - max w:  1e-06
+PF - mean w:  1e-06
+PF - standard deviation w:  0.0
+PF - estimated position: 
+[276.5272468651509, 266.50308568545626, 0.24486872706112717]
+
+PF: current particle set: 
+[276.52 266.50]
+PF - update motion...
+Sim - straight or slight turn...
+Sim - new x:  288.658366357
+Sim - new y:  262.87959198
+Sim - new orientation (rad):  0.215919905447
+Sim - new orientation (deg):  12.371299295
+
+Robot - Sensor dist, left:  25.1
+Robot - Sensor dist, front:  65.3
+PF - measurement update...
+Sim - Found valid wall:  [255, 279, 360, 279]
+Sim - Angle to wall:  0.215919905447
+Sim - Distance to wall:  6.50362683329
+Sim - Wall intercept point:  285.122529269 279.0
+Sim - Sensor dist,  left : 6.50362683329
+Sim - Found valid wall:  [360, 279, 360, 164]
+Sim - Angle to wall:  0.215919905447
+Sim - Distance to wall:  63.0375867555
+Sim - Wall intercept point:  360.0 278.527607452
+Sim - Sensor dist,  front : 63.0375867555
+Sim - Sensor difference, left:  18.5963731667
+Sim - Sensor difference, front:  2.2624132445
+Sim - gaussian error left:  0.00707881257331
+Sim - gaussian error front:  0.0262953487468
+Sim - gaussian error total:  0.000187139845329
+PF - resampling...
+PF - max w:  0.000187139845329
+PF - mean w:  0.000187139845329
+PF - standard deviation w:  0.0
+PF - estimated position: 
+[288.6583663571037, 262.8795919796605, 0.21591990544657147]
+
+PF: current particle set: 
+[288.65 262.87]
+PF - update motion...
+Sim - straight or slight turn...
+Sim - new x:  308.237623967
+Sim - new y:  264.776183847
+Sim - new orientation (rad):  0.14349162228
+Sim - new orientation (deg):  8.22146435211
+
+Robot - Sensor dist, left:  24.3
+Robot - Sensor dist, front:  47.4
+PF - measurement update...
+Sim - Found valid wall:  [255, 279, 360, 279]
+Sim - Angle to wall:  0.14349162228
+Sim - Distance to wall:  4.37151611469
+Sim - Wall intercept point:  306.182501227 279.0
+Sim - Sensor dist,  left : 4.37151611469
+Sim - Found valid wall:  [360, 279, 360, 164]
+Sim - Angle to wall:  0.14349162228
+Sim - Distance to wall:  42.2998760167
+Sim - Wall intercept point:  360.0 272.255051329
+Sim - Sensor dist,  front : 42.2998760167
+Sim - Sensor difference, left:  19.9284838853
+Sim - Sensor difference, front:  5.10012398331
+Sim - gaussian error left:  0.00547673599933
+Sim - gaussian error front:  0.0251024069096
+Sim - gaussian error total:  0.000138479255592
+PF - resampling...
+PF - max w:  0.000138479255592
+PF - mean w:  0.000138479255592
+PF - standard deviation w:  0.0
+PF - estimated position: 
+[308.23762396733605, 264.7761838469616, 0.1434916222796785]
+
+PF: current particle set: 
+[308.23 264.77]
+PF - update motion...
+Sim - straight or slight turn...
+Sim - new x:  318.787181465
+Sim - new y:  268.747447321
+Sim - new orientation (rad):  0.153749932861
+Sim - new orientation (deg):  8.80922225335
+
+Robot - Sensor dist, left:  22.7
+Robot - Sensor dist, front:  29.0
+PF - measurement update...
+Sim - Found valid wall:  [255, 279, 360, 279]
+Sim - Angle to wall:  0.153749932861
+Sim - Distance to wall:  0.374938102552
+Sim - Wall intercept point:  317.198312625 279.0
+Sim - Sensor dist,  left : 0.374938102552
+Sim - Found valid wall:  [360, 279, 360, 164]
+Sim - Angle to wall:  0.153749932861
+Sim - Distance to wall:  31.7047787712
+Sim - Wall intercept point:  360.0 275.134321422
+Sim - Sensor dist,  front : 31.7047787712
+Sim - Sensor difference, left:  22.3250618974
+Sim - Sensor difference, front:  2.70477877116
+Sim - gaussian error left:  0.00330088201212
+Sim - gaussian error front:  0.0261672636019
+Sim - gaussian error total:  8.73750497299e-05
+PF - resampling...
+PF - max w:  8.73750497299e-05
+PF - mean w:  8.73750497299e-05
+PF - standard deviation w:  0.0
+PF - estimated position: 
+[318.7871814653759, 268.7474473207355, 0.15374993286087069]
+
+PF: current particle set: 
+[318.78 268.74]
+PF - update motion...
+Sim - turn in place...
+Sim - new x:  318.787181465
+Sim - new y:  268.747447321
+Sim - new orientation (rad):  4.85474648713
+Sim - new orientation (deg):  278.156484318
+
+Robot - Sensor dist, left:  25.9
+Robot - Sensor dist, front:  75.4
+PF - measurement update...
+Sim - Found valid wall:  [360, 279, 360, 164]
+Sim - Angle to wall:  0.142357506742
+Sim - Distance to wall:  31.6339765606
+Sim - Wall intercept point:  360.0 274.654357907
+Sim - Sensor dist,  left : 31.6339765606
+Sim - Found valid wall:  [360, 164, 283, 164]
+Sim - Angle to wall:  0.142357506742
+Sim - Distance to wall:  95.8178722445
+Sim - Wall intercept point:  333.800321248 164.0
+Sim - Sensor dist,  front : 95.8178722445
+Sim - Sensor difference, left:  5.73397656058
+Sim - Sensor difference, front:  20.4178722445
+Sim - gaussian error left:  0.0338466225288
+Sim - gaussian error front:  0.0105312330497
+Sim - gaussian error total:  0.000357446669796
+PF - resampling...
+PF - max w:  0.000357446669796
+PF - mean w:  0.000357446669796
+PF - standard deviation w:  0.0
+PF - estimated position: 
+[318.7871814653759, 268.7474473207355, 4.854746487126821]
+
+PF: current particle set: 
+[318.78 268.74]
+PF - update motion...
+Sim - straight or slight turn...
+Sim - new x:  319.753611313
+Sim - new y:  252.760984665
+Sim - new orientation (rad):  4.90580237284
+Sim - new orientation (deg):  281.081771089
+
+Robot - Sensor dist, left:  25.9
+Robot - Sensor dist, front:  58.2
+PF - measurement update...
+Sim - Found valid wall:  [360, 279, 360, 164]
+Sim - Angle to wall:  0.193413392458
+Sim - Distance to wall:  31.0110869066
+Sim - Wall intercept point:  360.0 260.643715594
+Sim - Sensor dist,  left : 31.0110869066
+Sim - Found valid wall:  [360, 164, 283, 164]
+Sim - Angle to wall:  0.193413392458
+Sim - Distance to wall:  80.4474805006
+Sim - Wall intercept point:  337.138499299 164.0
+Sim - Sensor dist,  front : 80.4474805006
+Sim - Sensor difference, left:  5.11108690664
+Sim - Sensor difference, front:  22.2474805006
+Sim - gaussian error left:  0.0350093653088
+Sim - gaussian error front:  0.00885406603223
+Sim - gaussian error total:  0.000310975232191
+PF - resampling...
+PF - max w:  0.000310975232191
+PF - mean w:  0.000310975232191
+PF - standard deviation w:  0.0
+PF - estimated position: 
+[319.7536113128684, 252.76098466455613, 4.905802372842585]
+
+PF: current particle set: 
+[319.75 252.76]
+PF - update motion...
+Sim - straight or slight turn...
+Sim - new x:  324.135121477
+Sim - new y:  240.350886846
+Sim - new orientation (rad):  4.87626848855
+Sim - new orientation (deg):  279.389604166
+
+Robot - Sensor dist, left:  25.1
+Robot - Sensor dist, front:  39.9
+PF - measurement update...
+Sim - Found valid wall:  [360, 279, 360, 164]
+Sim - Angle to wall:  0.163879508163
+Sim - Distance to wall:  26.3519296932
+Sim - Wall intercept point:  360.0 246.281593462
+Sim - Sensor dist,  left : 26.3519296932
+Sim - Found valid wall:  [360, 164, 283, 164]
+Sim - Angle to wall:  0.163879508163
+Sim - Distance to wall:  67.3877449182
+Sim - Wall intercept point:  336.760696368 164.0
+Sim - Sensor dist,  front : 67.3877449182
+Sim - Sensor difference, left:  1.25192969318
+Sim - Sensor difference, front:  27.4877449182
+Sim - gaussian error left:  0.0395828131624
+Sim - gaussian error front:  0.00496150190688
+Sim - gaussian error total:  0.000197390202985
+PF - resampling...
+PF - max w:  0.000197390202985
+PF - mean w:  0.000197390202985
+PF - standard deviation w:  0.0
+PF - estimated position: 
+[324.13512147721656, 240.35088684611532, 4.876268488547714]
+
+PF: current particle set: 
+[324.13 240.35]
+PF - update motion...
+Sim - straight or slight turn...
+Sim - new x:  324.183709338
+Sim - new y:  221.164554407
+Sim - new orientation (rad):  4.88755297143
+Sim - new orientation (deg):  280.03615741
+
+Robot - Sensor dist, left:  24.2
+Robot - Sensor dist, front:  21.1
+PF - measurement update...
+Sim - Found valid wall:  [360, 279, 360, 164]
+Sim - Angle to wall:  0.175163991045
+Sim - Distance to wall:  26.3728692722
+Sim - Wall intercept point:  360.0 227.503240571
+Sim - Sensor dist,  left : 26.3728692722
+Sim - Found valid wall:  [360, 164, 283, 164]
+Sim - Angle to wall:  0.175163991045
+Sim - Distance to wall:  48.0528811333
+Sim - Wall intercept point:  334.300562965 164.0
+Sim - Sensor dist,  front : 48.0528811333
+Sim - Sensor difference, left:  2.17286927224
+Sim - Sensor difference, front:  26.9528811333
+Sim - gaussian error left:  0.0389634819967
+Sim - gaussian error front:  0.00529316240262
+Sim - gaussian error total:  0.00020724003798
+PF - resampling...
+PF - max w:  0.00020724003798
+PF - mean w:  0.00020724003798
+PF - standard deviation w:  0.0
+PF - estimated position: 
+[324.18370933766903, 221.16455440709217, 4.887552971429987]
+
+PF: current particle set: 
+[324.18 221.16]
+PF - update motion...
+Sim - turn in place...
+Sim - new x:  324.183709338
+Sim - new y:  221.164554407
+Sim - new orientation (rad):  3.35500178832
+Sim - new orientation (deg):  192.22744273
+
+Robot - Sensor dist, left:  19.0
+Robot - Sensor dist, front:  200.0
+PF - measurement update...
+Sim - Found valid wall:  [360, 164, 283, 164]
+Sim - Angle to wall:  0.213409134731
+Sim - Distance to wall:  48.4914586018
+Sim - Wall intercept point:  336.571786218 164.0
+Sim - Sensor dist,  left : 48.4914586018
+Sim - Sensor dist,  front : 200.0
+Sim - Sensor difference, left:  29.4914586018
+Sim - Sensor difference, front:  0.0
+Sim - gaussian error left:  0.000515561335784
+Sim - gaussian error front:  0.0265961520268
+Sim - gaussian error total:  1.47119476656e-05
+PF - resampling...
+PF - max w:  1.47119476656e-05
+PF - mean w:  1.47119476656e-05
+PF - standard deviation w:  0.0
+PF - estimated position: 
+[324.18370933766903, 221.16455440709217, 3.3550017883208376]
+
+PF: current particle set: 
+[324.18 221.16]
+PF - update motion...
+Sim - straight or slight turn...
+Sim - new x:  299.035921612
+Sim - new y:  222.888285878
+Sim - new orientation (rad):  3.28288531867
+Sim - new orientation (deg):  188.095473385
+
+Robot - Sensor dist, left:  20.9
+Robot - Sensor dist, front:  192.7
+PF - measurement update...
+Sim - Found valid wall:  [360, 164, 283, 164]
+Sim - Angle to wall:  0.141292665081
+Sim - Distance to wall:  49.4810270156
+Sim - Wall intercept point:  307.412219192 164.0
+Sim - Sensor dist,  left : 49.4810270156
+Sim - Found valid wall:  [106, 130, 106, 348]
+Sim - Angle to wall:  0.141292665081
+Sim - Distance to wall:  184.978928273
+Sim - Wall intercept point:  106.0 195.430765271
+Sim - Sensor dist,  front : 184.978928273
+Sim - Sensor difference, left:  28.5810270156
+Sim - Sensor difference, front:  7.72107172734
+Sim - gaussian error left:  0.000671565400217
+Sim - gaussian error front:  0.023296167943
+Sim - gaussian error total:  1.66449003481e-05
+PF - resampling...
+PF - max w:  1.66449003481e-05
+PF - mean w:  1.66449003481e-05
+PF - standard deviation w:  0.0
+PF - estimated position: 
+[299.03592161161697, 222.88828587826794, 3.28288531867081]
+
+PF: current particle set: 
+[299.03 222.88]
+PF - update motion...
+Sim - straight or slight turn...
+Sim - new x:  275.935256027
+Sim - new y:  217.460713353
+Sim - new orientation (rad):  3.21174837241
+Sim - new orientation (deg):  184.019626597
+
+Robot - Sensor dist, left:  29.0
+Robot - Sensor dist, front:  175.2
+PF - measurement update...
+Sim - Sensor dist,  left : 200.0
+Sim - Found valid wall:  [106, 130, 106, 348]
+Sim - Angle to wall:  0.0701557188192
+Sim - Distance to wall:  160.354311152
+Sim - Wall intercept point:  106.0 205.519185513
+Sim - Sensor dist,  front : 160.354311152
+Sim - Sensor difference, left:  171.0
+Sim - Sensor difference, front:  14.8456888479
+Sim - gaussian error left:  1.27316689976e-65
+Sim - gaussian error front:  0.0162973259044
+Sim - gaussian error total:  1e-06
+PF - resampling...
+PF - max w:  1e-06
+PF - mean w:  1e-06
+PF - standard deviation w:  0.0
+PF - estimated position: 
+[275.93525602690846, 217.46071335285336, 3.21174837240899]
+
+PF: current particle set: 
+[275.93 217.46]
+PF - update motion...
+Sim - straight or slight turn...
+Sim - new x:  259.231835728
+Sim - new y:  213.437573264
+Sim - new orientation (rad):  3.31471080786
+Sim - new orientation (deg):  189.918939597
+
+Robot - Sensor dist, left:  190.2
+Robot - Sensor dist, front:  157.3
+PF - measurement update...
+Sim - Sensor dist,  left : 200.0
+Sim - Found valid wall:  [106, 130, 106, 348]
+Sim - Angle to wall:  0.173118154266
+Sim - Distance to wall:  145.557033866
+Sim - Wall intercept point:  106.0 186.642138868
+Sim - Sensor dist,  front : 145.557033866
+Sim - Sensor difference, left:  9.8
+Sim - Sensor difference, front:  11.7429661343
+Sim - gaussian error left:  0.0246809490567
+Sim - gaussian error front:  0.0195764674243
+Sim - gaussian error total:  0.000484165795209
+PF - resampling...
+PF - max w:  0.000484165795209
+PF - mean w:  0.000484165795209
+PF - standard deviation w:  0.0
+PF - estimated position: 
+[259.23183572818607, 213.4375732636932, 3.314710807855768]
+
+PF: current particle set: 
+[259.23 213.43]
+PF - update motion...
+Sim - turn in place...
+Sim - new x:  259.231835728
+Sim - new y:  213.437573264
+Sim - new orientation (rad):  4.00046561758
+Sim - new orientation (deg):  229.209795974
+PF - update motion...
+Sim - straight or slight turn...
+Sim - new x:  246.948396009
+Sim - new y:  194.260147161
+Sim - new orientation (rad):  3.99598473978
+Sim - new orientation (deg):  228.953060588
+
+Robot - Sensor dist, left:  32.6
+Robot - Sensor dist, front:  200.0
+PF - measurement update...
+Sim - Sensor dist,  left : 200.0
+Sim - Sensor dist,  front : 200.0
+Sim - Sensor difference, left:  167.4
+Sim - Sensor difference, front:  0.0
+Sim - gaussian error left:  5.62677938077e-63
+Sim - gaussian error front:  0.0265961520268
+Sim - gaussian error total:  1e-06
+PF - resampling...
+PF - max w:  1e-06
+PF - mean w:  1e-06
+PF - standard deviation w:  0.0
+PF - estimated position: 
+[246.9483960092496, 194.26014716136777, 3.995984739784168]
+
+PF: current particle set: 
+[246.94 194.26]
+PF - update motion...
+Sim - straight or slight turn...
+Sim - new x:  245.735078133
+Sim - new y:  187.15940719
+Sim - new orientation (rad):  4.08367211868
+Sim - new orientation (deg):  233.977177316
+
+Robot - Sensor dist, left:  38.4
+Robot - Sensor dist, front:  200.0
+PF - measurement update...
+Sim - Sensor dist,  left : 200.0
+Sim - Sensor dist,  front : 200.0
+Sim - Sensor difference, left:  161.6
+Sim - Sensor difference, front:  0.0
+Sim - gaussian error left:  7.83183517903e-59
+Sim - gaussian error front:  0.0265961520268
+Sim - gaussian error total:  1e-06
+PF - resampling...
+PF - max w:  1e-06
+PF - mean w:  1e-06
+PF - standard deviation w:  0.0
+PF - estimated position: 
+[245.73507813253255, 187.15940719009387, 4.083672118682107]
+
+PF: current particle set: 
+[245.73 187.15]
+PF - update motion...
+Sim - turn in place...
+Sim - new x:  245.735078133
+Sim - new y:  187.15940719
+Sim - new orientation (rad):  4.86722483655
+Sim - new orientation (deg):  278.871441076
+PF - update motion...
+Sim - straight or slight turn...
+Sim - new x:  251.605385599
+Sim - new y:  158.9706004
+Sim - new orientation (rad):  4.87724397414
+Sim - new orientation (deg):  279.445495374
+
+Robot - Sensor dist, left:  29.0
+Robot - Sensor dist, front:  133.0
+PF - measurement update...
+Sim - Found valid wall:  [360, 279, 360, 164]
+Sim - Angle to wall:  0.164854993759
+Sim - Distance to wall:  99.8844093566
+Sim - Wall intercept point:  360.0 177.00365307
+Sim - Sensor dist,  left : 99.8844093566
+Sim - Found valid wall:  [283, 0, 0, 0]
+Sim - Angle to wall:  0.164854993759
+Sim - Distance to wall:  151.155520748
+Sim - Wall intercept point:  278.052504083 0.0
+Sim - Sensor dist,  front : 151.155520748
+Sim - Sensor difference, left:  70.8844093566
+Sim - Sensor difference, front:  18.155520748
+Sim - gaussian error left:  4.89926470445e-13
+Sim - gaussian error front:  0.0127849811787
+Sim - gaussian error total:  1.00000000626e-06
+PF - resampling...
+PF - max w:  1.00000000626e-06
+PF - mean w:  1.00000000626e-06
+PF - standard deviation w:  0.0
+PF - estimated position: 
+[251.60538559946227, 158.9706003997767, 4.877243974143312]
+
+PF: current particle set: 
+[251.60 158.97]
+PF - update motion...
+Sim - straight or slight turn...
+Sim - new x:  250.383216222
+Sim - new y:  143.121502933
+Sim - new orientation (rad):  4.88595541513
+Sim - new orientation (deg):  279.944624176
+
+Robot - Sensor dist, left:  26.3
+Robot - Sensor dist, front:  115.2
+PF - measurement update...
+Sim - Found valid wall:  [283, 164, 283, 0]
+Sim - Angle to wall:  0.173566434747
+Sim - Distance to wall:  23.1143224209
+Sim - Wall intercept point:  283.0 148.840223542
+Sim - Sensor dist,  left : 23.1143224209
+Sim - Found valid wall:  [283, 0, 0, 0]
+Sim - Angle to wall:  0.173566434747
+Sim - Distance to wall:  135.304688096
+Sim - Wall intercept point:  275.476796692 0.0
+Sim - Sensor dist,  front : 135.304688096
+Sim - Sensor difference, left:  3.18567757915
+Sim - Sensor difference, front:  20.104688096
+Sim - gaussian error left:  0.0379203893344
+Sim - gaussian error front:  0.0108324655306
+Sim - gaussian error total:  0.000411771310371
+PF - resampling...
+PF - max w:  0.000411771310371
+PF - mean w:  0.000411771310371
+PF - standard deviation w:  0.0
+PF - estimated position: 
+[250.38321622246002, 143.12150293334307, 4.885955415131463]
+
+PF: current particle set: 
+[250.38 143.12]
+PF - update motion...
+Sim - straight or slight turn...
+Sim - new x:  239.737182038
+Sim - new y:  131.432683638
+Sim - new orientation (rad):  4.83909815944
+Sim - new orientation (deg):  277.259901185
+
+Robot - Sensor dist, left:  22.8
+Robot - Sensor dist, front:  98.6
+PF - measurement update...
+Sim - Found valid wall:  [283, 164, 283, 0]
+Sim - Angle to wall:  0.126709179055
+Sim - Distance to wall:  33.6124534784
+Sim - Wall intercept point:  283.0 136.944006564
+Sim - Sensor dist,  left : 33.6124534784
+Sim - Found valid wall:  [283, 0, 0, 0]
+Sim - Angle to wall:  0.126709179055
+Sim - Distance to wall:  122.494878298
+Sim - Wall intercept point:  256.480612002 0.0
+Sim - Sensor dist,  front : 122.494878298
+Sim - Sensor difference, left:  10.8124534784
+Sim - Sensor difference, front:  23.8948782984
+Sim - gaussian error left:  0.0222354064084
+Sim - gaussian error front:  0.00747792217531
+Sim - gaussian error total:  0.000167274638659
+PF - resampling...
+PF - max w:  0.000167274638659
+PF - mean w:  0.000167274638659
+PF - standard deviation w:  0.0
+PF - estimated position: 
+[239.73718203799697, 131.43268363832436, 4.839098159439809]
+
+PF: current particle set: 
+[239.73 131.43]
+PF - update motion...
+Sim - straight or slight turn...
+Sim - new x:  237.8733266
+Sim - new y:  106.858678729
+Sim - new orientation (rad):  4.83077283967
+Sim - new orientation (deg):  276.782895499
+
+Robot - Sensor dist, left:  19.5
+Robot - Sensor dist, front:  79.6
+PF - measurement update...
+Sim - Found valid wall:  [283, 164, 283, 0]
+Sim - Angle to wall:  0.118383859283
+Sim - Distance to wall:  35.4447497934
+Sim - Wall intercept point:  283.0 112.226046023
+Sim - Sensor dist,  left : 35.4447497934
+Sim - Found valid wall:  [283, 0, 0, 0]
+Sim - Angle to wall:  0.118383859283
+Sim - Distance to wall:  97.6118745797
+Sim - Wall intercept point:  250.583099649 0.0
+Sim - Sensor dist,  front : 97.6118745797
+Sim - Sensor difference, left:  15.9447497934
+Sim - Sensor difference, front:  18.0118745797
+Sim - gaussian error left:  0.0111904017348
+Sim - gaussian error front:  0.0129334407709
+Sim - gaussian error total:  0.000145730398039
+PF - resampling...
+PF - max w:  0.000145730398039
+PF - mean w:  0.000145730398039
+PF - standard deviation w:  0.0
+PF - estimated position: 
+[237.87332660043432, 106.85867872859377, 4.830772839667216]
+
+PF: current particle set: 
+[237.87 106.85]
+PF - update motion...
+Sim - straight or slight turn...
+Sim - new x:  234.943949846
+Sim - new y:  97.5238626462
+Sim - new orientation (rad):  4.74734387755
+Sim - new orientation (deg):  272.002768081
+
+Robot - Sensor dist, left:  17.0
+Robot - Sensor dist, front:  62.2
+PF - measurement update...
+Sim - Found valid wall:  [283, 164, 283, 0]
+Sim - Angle to wall:  0.0349548971661
+Sim - Distance to wall:  38.0854236265
+Sim - Wall intercept point:  283.0 99.2043414214
+Sim - Sensor dist,  left : 38.0854236265
+Sim - Found valid wall:  [283, 0, 0, 0]
+Sim - Angle to wall:  0.0349548971661
+Sim - Distance to wall:  87.5834725073
+Sim - Wall intercept point:  238.354275512 0.0
+Sim - Sensor dist,  front : 87.5834725073
+Sim - Sensor difference, left:  21.0854236265
+Sim - Sensor difference, front:  25.3834725073
+Sim - gaussian error left:  0.00432000346884
+Sim - gaussian error front:  0.00635309959529
+Sim - gaussian error total:  2.84454122896e-05
+PF - resampling...
+PF - max w:  2.84454122896e-05
+PF - mean w:  2.84454122896e-05
+PF - standard deviation w:  0.0
+PF - estimated position: 
+[234.9439498457199, 97.52386264621651, 4.747343877550768]
+
+PF: current particle set: 
+[234.94 97.523]
+
+Measurement history: 
+[[25.9, 74.8], [26.7, 56.7], [26.7, 38.4], [25.9, 20.4], [18.4, 200.0], [20.7, 200.0], [32.6, 200.0], [77.4, 200.0], [38.3, 200.0], [27.1, 81.2], [25.1, 65.3], [24.3, 47.4], [22.7, 29.0], [25.9, 75.4], [25.9, 58.2], [25.1, 39.9], [24.2, 21.1], [19.0, 200.0], [20.9, 192.7], [29.0, 175.2], [190.2, 157.3], [32.6, 200.0], [38.4, 200.0], [29.0, 133.0], [26.3, 115.2], [22.8, 98.6], [19.5, 79.6], [17.0, 62.2]]
+
+PF: final particle set: 
+[234.94 97.523]
