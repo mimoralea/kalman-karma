@@ -41,7 +41,7 @@ Documentation is in [README.md](./pid-controller/README.md)
 
 Directory `slam` is for a start on the optional sections. 
 
-Documentation is in Room\_map.pdf
+Documentation is in [Room\_map.pdf](./slam/Room_map.pdf)
 
 
 [pf1]: ./particle-filter/robot_pictures/measuring_final_orientations.JPG "Robot 1a"
