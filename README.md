@@ -45,7 +45,7 @@ Directory slam is for a start on the optional sections. Documentation is in Room
 [pf4]: ./particle-filter/robot_pictures/robot_design_top.JPG "Robot 1d"
 
 [lf1]: ./line-follower/robot-pictures/20141206_173131.jpg "Robot 2a"
-[lf1]: ./line-follower/robot-pictures/20141206_173150.jpg "Robot 2b"
-[lf1]: ./line-follower/robot-pictures/20141206_173206.jpg "Robot 2c"
-[lf1]: ./line-follower/robot-pictures/20141206_173215.jpg "Robot 2d"
-[lf1]: ./line-follower/robot-pictures/20141206_173228.jpg "Robot 2e"
+[lf2]: ./line-follower/robot-pictures/20141206_173150.jpg "Robot 2b"
+[lf3]: ./line-follower/robot-pictures/20141206_173206.jpg "Robot 2c"
+[lf4]: ./line-follower/robot-pictures/20141206_173215.jpg "Robot 2d"
+[lf5]: ./line-follower/robot-pictures/20141206_173228.jpg "Robot 2e"
